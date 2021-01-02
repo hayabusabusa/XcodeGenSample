@@ -9,7 +9,13 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        Text("Hello world")
+        NavigationView {
+            List {
+                HomeListCell(title: "Horizontal grid")
+                HomeListCell(title: "Coming soon")
+            }
+            .navigationTitle("Samples")
+        }
     }
 }
 
