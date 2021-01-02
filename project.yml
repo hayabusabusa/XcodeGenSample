@@ -1,0 +1,10 @@
+name: XcodeGenSample
+
+options:
+  bundleIdPrefix: com.shunya.yamada
+
+targets:
+  XcodeGenSample:
+    type: application
+    platform: iOS
+    sources: XcodeGenSample
