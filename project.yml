@@ -3,8 +3,16 @@ name: XcodeGenSample
 options:
   bundleIdPrefix: com.shunya.yamada
 
+packages:
+  Kingfisher:
+    url: https://github.com/onevcat/Kingfisher.git
+    majorVersion: 6.0.0
+
 targets:
   XcodeGenSample:
     type: application
     platform: iOS
+    scheme: {}
     sources: XcodeGenSample
+    dependencies:
+      - package: Kingfisher

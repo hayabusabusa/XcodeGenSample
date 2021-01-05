@@ -11,10 +11,9 @@ struct HomeScreen: View {
     var body: some View {
         NavigationView {
             List {
-                HomeListCell(title: "Horizontal grid")
-                HomeListCell(title: "Coming soon")
+                HomeListCell(title: "記事のタイトル", content: "コンテンツ", imageURL: nil)
             }
-            .navigationTitle("Samples")
+            .navigationTitle("Sample")
         }
     }
 }
