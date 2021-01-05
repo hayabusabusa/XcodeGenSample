@@ -9,10 +9,16 @@ packages:
     majorVersion: 6.0.0
 
 targets:
-  XcodeGenSample:
+  App:
     type: application
     platform: iOS
     scheme: {}
-    sources: XcodeGenSample
+    sources: App
     dependencies:
       - package: Kingfisher
+      - target: Core
+
+  Core:
+    type: framework
+    platform: iOS
+    sources: Core
