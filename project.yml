@@ -7,6 +7,9 @@ packages:
   Kingfisher:
     url: https://github.com/onevcat/Kingfisher.git
     majorVersion: 6.0.0
+  Alamofire:
+    url: "https://github.com/Alamofire/Alamofire.git"
+    majorVersion: 5.2.0
 
 targets:
   App:
@@ -16,9 +19,12 @@ targets:
     sources: App
     dependencies:
       - package: Kingfisher
+      - package: Alamofire
       - target: Core
 
   Core:
     type: framework
     platform: iOS
     sources: Core
+    dependencies:
+      - package: Alamofire
