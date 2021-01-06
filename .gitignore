@@ -84,3 +84,6 @@ iOSInjectionProject/
 # XcodeGen
 *.xcodeproj
 *.xcworkspace
+
+# Access token
+Secret.swift

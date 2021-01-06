@@ -19,7 +19,6 @@ targets:
     sources: App
     dependencies:
       - package: Kingfisher
-      - package: Alamofire
       - target: Core
 
   Core:
