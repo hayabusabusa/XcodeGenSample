@@ -20,19 +20,19 @@ public protocol APIRequest {
 }
 
 extension APIRequest {
-    var baseURL: String {
+    public var baseURL: String {
         return "https://qiita.com/api/v2"
     }
     
-    var encoding: Alamofire.ParameterEncoding {
+    public var encoding: Alamofire.ParameterEncoding {
         return JSONEncoding.default
     }
     
-    var parameters: Alamofire.Parameters? {
+    public var parameters: Alamofire.Parameters? {
         return nil
     }
     
-    var headers: Alamofire.HTTPHeaders? {
+    public var headers: Alamofire.HTTPHeaders? {
         return nil
     }
 }

@@ -7,32 +7,37 @@
 
 import Alamofire
 
-struct ItemsRequest: APIRequest {
-    typealias Response = [QiitaItem]
+public struct ItemsRequest: APIRequest {
+    public typealias Response = [QiitaItem]
     
     let page: Int
-    let perPage: Int = 20
+    let perPage: Int
     
-    var path: String {
+    public init(page: Int, perPage: Int = 20) {
+        self.page = page
+        self.perPage = perPage
+    }
+    
+    public var path: String {
         return "/items"
     }
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         return HTTPMethod.get
     }
     
-    var parameters: Parameters? {
+    public var parameters: Parameters? {
         return [
             "page": page,
             "per_page": perPage
         ]
     }
     
-    var encoding: ParameterEncoding {
+    public var encoding: ParameterEncoding {
         return URLEncoding.queryString
     }
     
-    var headers: HTTPHeaders? {
+    public var headers: HTTPHeaders? {
         return HTTPHeaders([
             HTTPHeader(name: "Authorization", value: "Bearer " + qiitaAccessToken)
         ])
