@@ -37,7 +37,7 @@ struct HomeListCell: View {
                 
                 Text(title)
                     .bold()
-                    .font(.body)
+                    .font(.system(size: 16))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             HStack(spacing: 8.0) {
@@ -45,7 +45,7 @@ struct HomeListCell: View {
                     .frame(width: 40)
                 
                 Text(content)
-                    .font(.callout)
+                    .font(.system(size: 12))
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -57,6 +57,6 @@ struct HomeListCell: View {
 
 struct HomeListCell_Previews: PreviewProvider {
     static var previews: some View {
-        HomeListCell(title: "プレビュー", content: "内容", imageURL: nil).previewLayout(.fixed(width: 320, height: 96))
+        HomeListCell(title: "プレビュー", content: "内容", imageURL: nil).previewLayout(.fixed(width: 320, height: 64))
     }
 }
