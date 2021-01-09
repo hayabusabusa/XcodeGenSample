@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Combine
 
 struct HomeScreen: View {
+    @ObservedObject var viewModel = HomeViewModel()
+    
     var body: some View {
         NavigationView {
-            List {
-                HomeListCell(title: "記事のタイトル", content: "コンテンツ", imageURL: nil)
+            List(viewModel.items.indices, id: \.self) { index in
+                HomeListCell(title: viewModel.items[index].title ?? "", content: viewModel.items[index].body ?? "", imageURL: viewModel.items[index].user.profileImageURL)
             }
             .navigationTitle("Sample")
         }
